@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
   name: "Login",
   data() {
@@ -34,16 +33,10 @@ export default {
     };
   },
 
-  created() {
-    this.fetchSkillInfos();
-  },
-
   methods: {
-    ...mapActions(["fetchSkillInfos"]),
-
     login() {
       // TODO: login execute and error handling
-      this.$router.push({ path: "/about" });
+      this.$router.push({ path: "/skill" });
     },
 
     reset() {
