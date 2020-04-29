@@ -28,6 +28,6 @@ public class SkillService {
 	}
 
 	public void upload() {
-		firebaseUploadService.execute(getSkillCategories(), getSkills());
+		firebaseUploadService.uploadSkill(getSkillCategories(), getSkills());
 	}
 }

@@ -38,9 +38,9 @@ public class FirebaseUploadService {
 		app = FirebaseApp.initializeApp(options);
 	}
 
-	public void execute(List<SkillCategory> categories, List<Skill> skills) {
+	public void uploadSkill(List<SkillCategory> categories, List<Skill> skills) {
 		final FirebaseDatabase database = FirebaseDatabase.getInstance(app);
-		DatabaseReference ref = database.getReference("/skill--categories");
+		DatabaseReference ref = database.getReference("/skill-categories");
 		List<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
 		Map<String, Object> dataMap;
 		for (SkillCategory category : categories) {
